@@ -4,7 +4,7 @@ import getComments from 'lib/get-comments';
 import styles from './page.module.css';
 
 export default async function Comments({ params }) {
-  const { id } = params
+  const { id } = await params
   const story = await getItem(id)
   const comments = await getComments(story.comments);
   return (

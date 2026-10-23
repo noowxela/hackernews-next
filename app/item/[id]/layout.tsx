@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ItemPage({ params, children }) {
-  const { id } = params
+  const { id } = await params
   if (!id) {
     notFound()
   }
